@@ -11,11 +11,11 @@
 <div>
       <a href={% url 'edit_flashcard' slug=deck.slug%}>Edit Flashcard</a>
       <a href={% url 'delete_flashcard' slug=deck.slug%}>Delete Flashcard</a>
-    
+
     </div>
  </div>
 </section>
-
+{% endfor %}
 <section>
   <a href={% url 'add_deck' %}>Add a New Deck</a>
 </section>

@@ -5,15 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% block meta %}{% endblock meta %}
-  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+  <link rel="stylesheet" href="styling.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <title> Flashcards </title>
 </head>
 
 <body class="sans-serif">
-  <header class="">
-    <a href={% url "homepage" %} class=""><h1 class="">Shadow Clan's Flashcards</h1></a>
-    <nav class="">
+  <header class="pa5">
+    <a href={% url "homepage" %} class="link underline-hover blue"><h2 class="f4 lh-copy">Shadow Clan's Flashcards</h2></a>
+    <nav class="navbar-menu">
       <div class="">
       
         {% if user.is_authenticated %}
@@ -22,7 +24,7 @@
         {% else %}
           <a href={% url 'registration_register' %}>Register</a>
           <a href={% url 'auth_login' %}>Log In</a>
-        {% endif %}
+        {% endif %} 
 
       </div>
     </nav>

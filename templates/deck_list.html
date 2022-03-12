@@ -5,8 +5,8 @@
 <section>
   <h1>All Flashcard Decks</h1>
   {% for deck in decks %}
-  <div>
-      <p>{{ deck.name }} </p>
+  <div class="box w5 h-75 pb5">
+      <p class="f3 lh-copy">{{ deck.name }} </p>
       <p>{{ deck.description }} </p>
 <div>
       <a href={% url 'edit_deck' slug=deck.slug%}>Edit Deck</a>
@@ -19,8 +19,8 @@
   {% endfor %}
 </section>
 
-<section>
-  <a href={% url 'add_deck' %}>Add a New Deck</a>
+<section class="pt4">
+  <a  href={% url 'add_deck' %}>Add a New Deck</a>
 </section>
 {% endblock content %}
 
